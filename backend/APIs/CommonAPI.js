@@ -55,8 +55,8 @@ commonApp.post(
       // Store token in cookie
       res.cookie("token", token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: "lax"
+        secure: true,
+        sameSite: "none"
       });
 
       const userObj = createdUser.toObject();
@@ -109,8 +109,8 @@ commonApp.post("/login", async (req, res, next) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax"
+      secure: true,
+      sameSite: "none"
     });
 
     const userObj = user.toObject();
@@ -126,8 +126,8 @@ commonApp.post("/login", async (req, res, next) => {
 commonApp.get("/logout", (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax"
+    secure: true,
+    sameSite: "none"
   });
 
   res.status(200).json({ message: "Logout Successful" });
