@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check APIs/AdminAPI.js && node --check APIs/CommonAPI.js && node --check APIs/CartAPI.js && node --check APIs/ProductAPI.js && node --check models/UserModel.js && node --check models/ProductModel.js && node --check models/CartModel.js && node --check middlewares/verifyToken.js && node --check config/cloudinary.js && node --check config/cloudinaryUpload.js && node --check config/cookie.js && node --check config/env.js",
+    "test": "npm run check"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.10.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.7.0",
+    "multer": "^2.1.1"
+  }
+}

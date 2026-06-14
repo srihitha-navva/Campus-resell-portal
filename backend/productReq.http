@@ -1,0 +1,40 @@
+### productReq.http
+
+### Add Product
+POST http://localhost:4000/product-api/
+Content-Type: application/json
+
+{
+  "title": "Dell Laptop",
+  "description": "Dell Inspiron i5, 8GB RAM, 512GB SSD",
+  "category": "Electronics",
+  "price": 25000,
+  "condition": "Good",
+  "image": "https://example.com/laptop.jpg"
+}
+
+### Get all available products
+GET http://localhost:4000/product-api/
+
+### Get Single Product
+GET http://localhost:4000/product-api/6a2e66fe5bb7b25fd700e45c
+
+### Get my products
+GET http://localhost:4000/product-api/my/products
+
+### Update Product
+PUT http://localhost:4000/product-api/6a2e66fe5bb7b25fd700e45c
+Content-Type: application/json
+
+{
+  "title": "Dell Laptop Updated",
+  "description": "Dell Inspiron i5, 16GB RAM, 512GB SSD",
+  "price": 27000,
+  "condition": "Like New"
+}
+
+### Mark Product as sold
+PATCH http://localhost:4000/product-api/sold/6a2e66fe5bb7b25fd700e45c
+
+### Delete Product
+DELETE http://localhost:4000/product-api/6a2e66fe5bb7b25fd700e45c
