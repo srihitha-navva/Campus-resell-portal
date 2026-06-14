@@ -19,7 +19,7 @@ const app = exp();
 // Middlewares
 app.use(
   cors({
-    origin: "http://localhost:5173", // React Frontend URL
+    origin: "https://campus-resell-portal-gamma.vercel.app", 
     credentials: true,
   })
 );
